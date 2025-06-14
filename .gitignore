@@ -42,4 +42,4 @@ Thumbs.db
 # Environment files
 .env
 
-config/secret.js
+secret.js
