@@ -1,0 +1,88 @@
+<ion-content>
+  <div class="about-background">
+    <div class="page-header">
+      <div class="welcome">
+        <p> Welcome to </p>
+      </div>
+      <div class="logo">
+        <img src="../../../../assets/logo/finance-tracker.png" />
+      </div>
+    </div>
+  </div>
+
+  <div class="content-center">
+    <form [formGroup]="loginForm">
+      <ng-container>
+        <p class="input-label">Username</p>
+        <div class="input-box">
+          <ion-input
+            formControlName="userName"
+          />
+        </div>
+      </ng-container>
+      <ng-container>
+        <p class="input-label">Password</p>
+        <div class="input-box">
+          <ion-input
+            formControlName="password"
+          />
+        </div>
+      </ng-container>
+    </form>
+  </div>
+
+  <ft-button
+    [buttonName]="'Login'"
+    [disabled]="!isLoginFormValid()"
+    [full]="false"
+    (onClick)="login()"
+  >
+  </ft-button>
+
+  <div class="create-account">
+    <span>New User? </span>
+    <span class="signup" (click)="onClickShowModal()">Create Account</span>
+  </div>
+
+  <ion-modal id="glob-custom-modal" class="small" (willDismiss)="onWillDismissModal($event)" [isOpen]="isModalOpen">
+    <ng-template>
+      <div class="content-center custom-form">
+        <form [formGroup]="signUpForm">
+          <ion-input
+            formControlName="userName"
+            fill="solid"
+            placeholder="Username"
+          />
+        
+          <ion-input
+            formControlName="displayname"
+            fill="solid"
+            placeholder="Display Name"
+          />
+
+          <ion-input
+            formControlName="password"
+            fill="solid"
+            placeholder="Password"
+          />
+  
+          <ion-input
+            formControlName="confirmPassword"
+            fill="solid"
+            placeholder="Confirm Password"
+          />
+        </form>
+      </div>
+      <div class="confirm-singup-buttons">
+        <ft-button (onClick)="onClickCancel()" [full]="false" [buttonName]="'Cancel'"></ft-button>
+        <ft-button (onClick)="signup()" [full]="false" [buttonName]="'Signup'" [disabled]="!isSignUpFormValid()"></ft-button>
+      </div>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div class="content-center reserve-right">
+    <p>Finance Tracker {{ currentYear }}. All rights reserved</p>
+  </div>
+</ion-footer>

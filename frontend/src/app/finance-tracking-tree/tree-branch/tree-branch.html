@@ -1,0 +1,21 @@
+<div class="tree-node">
+  <img *ngIf="hasDownArrow" class="down-arrow" src="../../../assets/icons/down-arrow.png">
+  
+  <tree-node
+    [node]="node"
+    [isFirstLevelNode]="isFirstLevelNode"
+  ></tree-node>
+
+  <ul *ngIf="node.children?.length" [class.edge-padding]="!isFirstLevelNode">
+    <li *ngFor="let child of node?.children; let isLast = last">
+      <div class="node-container" [class.tree-edge] = "!isLast || (isFirstLevelNode && !isLeafNode)">
+        <div class="curved-arrow"></div>
+        <tree-branch
+          [node]="child"
+          [isLeafNode]="isLeafNode"
+          [isFirstLevelNode]="false"
+        ></tree-branch>
+      </div>    
+    </li>
+  </ul>
+</div>

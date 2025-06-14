@@ -1,0 +1,19 @@
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.full {
+  width: 90%;
+}
+
+.short {
+  width: 130px;
+}
+
+.disable {
+  color: #979797;
+}

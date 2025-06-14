@@ -1,0 +1,204 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+
+ion-loading.custom-loading {
+    --opacity: 0;
+    // --background: none;
+    --spinner-color: #D9D9D9;
+    .loading-wrapper {
+        background: transparent;
+        box-shadow: none;
+    }
+}
+.glob-custom-ft-btn {
+    height: 48px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.glob-custom-ft-btn:disabled, .glob-custom-ft-btn[disabled] {
+    color: #979797;
+}
+
+.glob-custom-form {
+    padding-top: 40px;
+    
+    color: black;
+    ion-input {
+        width: 85vw;
+        height: 65px;
+        margin-bottom: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: white;
+
+        --border-radius: 4px;
+        --padding-start: 10px;
+        --padding-end: 10px;
+        --highlight-color-focused: #0483E2;
+        --highlight-color-valid: #4AB24D;
+        --highlight-color-invalid: red;
+        --placeholder-color: #979797;
+        --border-width: 2px;
+    }
+}
+
+.glob-ft-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+ion-input .label-text{
+    color: #979797;
+}
+
+ion-select::part(label) {
+    color: #979797;
+}
+
+.input-fill-solid.has-focus.sc-ion-input-md-h {
+    --background: white;
+}
+
+.glob-one-line-text {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.glob-small-text-box {
+    padding-bottom: 30px;
+}
+
+.glob-bottom-text {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #4AB24D;
+    margin: 20px 10px;
+}
+
+.glob-center-image {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(100% - 10px);
+}
+
+.glob-bottom-two-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.glob-bottom-tabs {
+    width: 20%;
+    padding-top: 10px;
+  
+    ion-icon {
+      height: 15px;
+      width: 15px;
+    }
+  
+    ion-tab-bar {
+      border: none;
+    }
+  
+    ion-tab-button {
+      border: none;
+    }
+  }
+  
+
+ion-modal#glob-custom-modal {
+    --width: 88%;
+    --min-width: 250px;
+    --background: #010536;
+    --height: 85%;
+    --border-radius: 25px;
+}
+  
+ion-modal#glob-custom-modal .glob-modal-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    color: white;
+    margin: 10px 5%;
+    overflow-y: scroll;
+}
+
+ion-modal#glob-custom-modal .ion-delegate-host {
+    border: 4px solid #4AB24D;
+    border-radius: 25px;
+}
+
+ion-modal#glob-custom-modal .glob-modal-image {
+    img {
+        height: 220px;
+        margin: 10px 5%;
+    }
+}
+
+/* medium modal */
+ion-modal#glob-custom-modal.medium {
+    --max-height: 55%;;
+}
+
+/* Small modal */
+ion-modal#glob-custom-modal.small {
+    --max-height: 45%;;
+}
+
+
+/** only for ion-select-option **/
+ion-popover {
+    height: 90%;
+}
+
+ion-tab-bar {
+    --background: #010536;
+    --color: #4AB24D;
+}
+
+ion-alert .alert-wrapper {
+    --background: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.alert-button.sc-ion-alert-md {
+    height: 50px;
+}

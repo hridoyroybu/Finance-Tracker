@@ -1,0 +1,57 @@
+ion-toolbar, ion-header {
+  position: fixed;
+  top: 0;
+  --min-height: 2px;
+  --background: #394052;
+}
+
+.about-background {
+  padding-top: env(safe-area-inset-top);
+  
+  .inner-scroll {
+    overflow-x: inherit;
+    overflow-y: inherit;
+  }
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px;
+  }
+
+  .logo {
+    padding: 10px 0 20px;
+    margin-top: 10px;
+    text-align: center;
+    padding-bottom: 5px;
+    max-width: 65%;
+  }
+
+  .logout {
+    border: none;
+    margin-top: 20px;
+    padding: 2px 2px;
+    color: #4AB24D;
+    
+    ion-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+  }
+
+  .welcome {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    line-height: 32px;
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #4AB24D;
+  }
+}

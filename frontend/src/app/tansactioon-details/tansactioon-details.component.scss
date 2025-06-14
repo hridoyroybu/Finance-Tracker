@@ -1,0 +1,43 @@
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  width: 95%;
+}
+
+.input-box {
+  background: #394052;
+  padding: 5px 15px;
+  border: 2px solid #4AB24D;
+  border-radius: 16px;
+  color: white;
+  width: 80vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.input-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+ion-select::part(icon) {
+  right: 0;
+  left: auto;
+  position: absolute;
+  color: white;
+}
+
+.centered-popover .popover-content {
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 80%; /* Adjust width as needed */
+}

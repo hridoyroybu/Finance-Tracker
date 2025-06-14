@@ -1,0 +1,32 @@
+<ion-content>
+    <page-header 
+        [headerTitle]="titleHeader"
+    >
+    </page-header>
+    <ng-container>
+        <!-- <ft-text-area>
+            <tree-node [node]="locationInfo"></tree-node>
+        </ft-text-area> -->
+    </ng-container>
+
+    <ng-container>
+        <ft-text-area>
+            <div class="tree">
+                <ul>
+                  <div *ngFor="let node of treeData; let isLast = last; let isFirst = first">
+                      <tree-branch
+                        [node]="node"
+                        [hasDownArrow]="!isFirst"
+                        [isLeafNode]="isLast"
+                      >
+                      </tree-branch>
+                  </div>
+                </ul>
+            </div>
+        </ft-text-area>
+    </ng-container>
+</ion-content>
+
+<ion-footer>
+    <ft-bottom-tabs></ft-bottom-tabs>
+</ion-footer>

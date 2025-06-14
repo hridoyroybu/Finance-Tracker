@@ -1,0 +1,71 @@
+.tree-node ul {
+  padding-left: 38px;
+  list-style-type: none;
+  position: relative;
+}
+
+.down-arrow {
+  margin-left: 50px;
+}
+
+.tree-node li::before {
+  top: 0;
+  bottom: 50%;
+}
+
+.tree-node li::after {
+  top: 50%;
+  bottom: 0;
+}
+
+.tree-node li:only-child::before, 
+.tree-node li:only-child::after {
+  display: none;
+}
+
+.tree-node li {
+  padding-left: 20px;
+}
+
+.node {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  margin: 10px 0;
+  height: 40px;
+}
+
+.node-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tree-edge {
+  border-left: 3px solid white;
+}
+
+.edge-padding {
+  margin-left: 20px;
+}
+
+.curved-arrow {
+  position: absolute;
+  width: 40px; /* Width of the horizontal part */
+  height: 50px; /* Height of the vertical part */
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  border-radius: 0 0 0 30px; /* Creates the curve */
+}
+
+.curved-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0; /* For accurate arrowhead placement */
+  bottom: -7px; /* For accurate arrowhead placement */
+  width: 10px; /* Size of the arrowhead */
+  height: 10px;
+  border-right: 3px solid white;
+  border-top: 3px solid white;
+  transform: rotate(45deg); /* Creates the arrowhead */
+}

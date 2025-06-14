@@ -1,0 +1,116 @@
+
+.about-background {
+  padding-top: env(safe-area-inset-top);
+  
+  .inner-scroll {
+    overflow-x: inherit;
+    overflow-y: inherit;
+  }
+  
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 20px;
+  }
+  
+  .welcome {
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #4AB24D;
+  }
+}
+
+.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.input-container {
+  width: 95%;
+}
+
+.input-box {
+  background: #394052;
+  padding: 5px 15px;
+  border: 2px solid #4AB24D;
+  border-radius: 16px;
+  color: white;
+  width: 80vw;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+}
+
+.input-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+ion-select::part(icon) {
+  right: 0;
+  left: auto;
+  position: absolute;
+  color: white;
+}
+
+.centered-popover .popover-content {
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 80%; /* Adjust width as needed */
+}
+
+.create-account {
+  margin-top: 10vh;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.signup {
+  margin-left: 5px;
+  text-decoration: underline;
+  color: #4AB24D;
+}
+
+.custom-form {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  
+  ion-input {
+    width: 80vw;
+    height: 65px;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid  #4AB24D;
+    font-size: 18px;
+    --border-radius: 4px;
+    --background: #394052;
+    --highlight-color-focused: #0483E2;
+    --highlight-color-valid: #4AB24D;
+    --highlight-color-invalid: red;
+  }
+}
+
+.confirm-singup-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -20px;
+}
+
+.reserve-right {
+  color: white;
+}

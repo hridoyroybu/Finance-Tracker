@@ -1,0 +1,45 @@
+# Temporary files
+*~
+*.sw[mnpcod]
+*.tmp
+*.tmp.*
+.tmp
+UserInterfaceState.xcuserstate
+
+# Recycle bin
+$RECYCLE.BIN/
+
+# Logs
+*.log
+log.txt
+npm-debug.log*
+
+# IDE and editor directories
+.idea/
+.vscode/
+
+# Ionic-specific directories
+.ionic/
+.sass-cache/
+.sourcemaps/
+.versions/
+
+# Build-related and platform directories
+coverage/
+dist/
+node_modules/
+platforms/
+plugins/
+www/
+build/
+ios/
+android/
+
+# General system files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+config/secret.js

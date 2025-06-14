@@ -1,0 +1,72 @@
+<ion-content
+  [scrollEvents]="true"
+  (ionScrollStart)="handleScrollStart()"
+  (ionScrollEnd)="handleScrollEnd()"
+>
+  <page-header 
+    [headerTitle]="titleHeader"
+  >
+  </page-header>
+
+  <div class="content-center">
+    <div>
+      <p class="input-label">Deposit/Withdrawn</p>
+        <ion-select 
+          class="input-box"
+          interface="action-sheet"
+          [value]="selectedNetworkOption"
+        >
+          <ion-select-option value="deposit">Deposit (Savings)</ion-select-option>
+          <ion-select-option value="withdrawn">Withdrawn (Expense)</ion-select-option>
+        </ion-select>
+    </div>
+  </div>
+
+
+  <div class="content-center">
+    <form [formGroup]="transactionRecordForm">
+      <ng-container>
+        <p class="input-label">Date</p>
+        <div class="input-box">
+          <ion-input
+            #dateInput
+            formControlName="date"
+            (click)="currentFocusedField(1)"
+          />
+        </div>
+      </ng-container>
+      <ng-container>
+        <p class="input-label">Amount</p>
+        <div class="input-box">
+          <ion-input
+            #amountInput
+            formControlName="amount"
+            (click)="currentFocusedField(2)"
+          />
+        </div>
+      </ng-container>
+      <ng-container>
+        <p class="input-label">Note</p>
+        <div class="input-box">
+          <ion-input
+            #noteInput
+            formControlName="note"
+            (click)="currentFocusedField(3)"
+          />
+        </div>
+      </ng-container>
+    </form>
+  </div>
+  <div>
+    <ft-button
+      #submitBtn
+      *ngIf="!isKeyboardHide"
+      [buttonName]="'Save'"
+      (onClick)="onClickSaveSettings()"
+      [disabled]="!formValid()">
+    </ft-button>
+  </div>
+</ion-content>
+<ion-footer>
+  <ft-bottom-tabs></ft-bottom-tabs>
+</ion-footer>

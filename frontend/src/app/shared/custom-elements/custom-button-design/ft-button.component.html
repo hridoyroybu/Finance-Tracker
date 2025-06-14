@@ -1,0 +1,25 @@
+<div class="content-center" style="text-align: center">
+  <ng-container *ngIf="full; else shortBtn">
+    <ion-button
+      shape="round"
+      [color]="disabled ? 'disable' : 'accent'"
+      tappable class="glob-custom-ft-btn full" 
+      (click)="onSubmit()"
+      [class.disable]="disabled"
+    > 
+      {{ buttonName }}
+    </ion-button>
+  </ng-container>
+
+  <ng-template #shortBtn>
+    <ion-button
+      shape="round"
+      [color]="disabled ? 'disable' : 'accent'"
+      tappable class="glob-custom-ft-btn short"
+      (click)="onSubmit()"
+      [class.disable]="disabled"
+    > 
+      {{ buttonName }}
+    </ion-button>
+  </ng-template>
+</div>

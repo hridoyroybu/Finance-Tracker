@@ -1,0 +1,49 @@
+<ion-content>
+  <div [hidden]="scanActive">
+    <page-header 
+      [headerTitle]="titleHeader"
+    >
+    </page-header>
+  </div>
+  
+  <div *ngIf="!scannedResult" [hidden]="scanActive">
+    <ft-text-area>
+      Find the Secure Access Point (SAP), carefully remove it from the packaging, and scan the QR Code on the bottom of the device. 
+      <ft-image-box>
+        <div class="glob-center-image">
+          <img src="assets/example/sap-scan.png" />
+        </div>
+      </ft-image-box>
+    </ft-text-area>
+  </div>
+
+  <div *ngIf="scannedResult" [hidden]="scanActive">
+    <ft-text-area>
+      <ft-icon 
+        class="glob-ft-icon"
+        [tick]="true"
+      >
+      </ft-icon>
+      <p class="glob-one-line-text">Bar code is successfully scanned. <br></p>
+    </ft-text-area>
+  </div>
+  <div *ngIf="scanActive" class="scan-box" [hidden]="!scanActive"></div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <div [hidden]="scanActive"> 
+    <ft-button
+      *ngIf="!scannedResult"
+      (onClick)="startScan()"
+      [buttonName]="'Scan the QR Code'">
+    </ft-button>
+    
+    <ft-button
+      *ngIf="scannedResult"
+      (onClick)="onClickGetSAP()"
+      [buttonName]="'Next'">
+    </ft-button>
+  </div>
+</ion-footer>
+
+

@@ -1,0 +1,21 @@
+<div class="node-content" [class.reduce-gap]="!isFirstLevelNode">
+  <div class="node-icon">
+    <div class="icon-label"
+      [ngClass]="{
+        'balance-border': node?.isBalance,
+        'deposit-border': !node?.isBalance && node?.isDeposit,
+        'withdrawn-border': !node?.isBalance && !node?.isDeposit
+      }"
+    >
+      <p *ngIf="node?.isBalance">Balance: {{ node?.amount }}</p>
+      <p *ngIf="!node?.isBalance && node?.isDeposit">Deposit: {{ node?.amount }}</p>
+      <p *ngIf="!node?.isBalance && !node?.isDeposit">Withdrawn: {{ node?.amount }}</p>
+    </div>
+  </div>
+
+  <div class="node-data" *ngIf="!node?.isBalance">
+      <p><span>Note:</span> {{ node.note }}</p>
+      <p><span>Date:</span>{{ node.date }}</p>
+  </div>
+</div>
+
